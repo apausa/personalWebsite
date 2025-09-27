@@ -5,7 +5,7 @@ import type p5 from "p5";
 const asciiOrb =
   (theme?: string) =>
   (p: p5): void => {
-    const getThemeColor = () => (theme === "light" ? "#8be9fd" : "#49368d");
+    const getThemeColor = () => (theme === "light" ? "#8be9fd" : "#44475a");
 
     const orbChars = [" ", "·", ":", "-", "=", "+", "*", "#"];
     let orbRadius: number;

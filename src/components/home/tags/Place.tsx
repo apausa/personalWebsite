@@ -6,7 +6,7 @@ export default function Place({ className }: { className: string }) {
   return (
     <div
       className={cn(
-        "flex items-center gap-2 text-custom-selection dark:text-custom-current",
+        "flex items-center gap-2 text-custom-selection dark:text-custom-purple",
         className,
       )}
     >
