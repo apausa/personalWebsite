@@ -41,15 +41,6 @@ export default function Education({ className }: { className: string }) {
             >
               Universitat de Barcelona
             </a>
-            {" / "}
-            <a
-              className="hover:underline"
-              href="https://maps.app.goo.gl/kGEBU53uppwkbgTGA"
-              rel="noreferrer"
-              target="_blank"
-            >
-              Universitat Oberta de Catalunya
-            </a>
           </h4>
           <p>Bachelor of Arts - BA, Digital Design</p>
         </li>
