@@ -1,10 +1,29 @@
+"use client";
+
+import { useEffect, useState } from "react";
+
 import Image from "next/image";
 
 export default function Picture({ src }: { src: string }) {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) {
+    return (
+      <div className="relative w-full h-full bg-gray-200">
+        <div className="absolute inset-0 bg-custom-selection mix-blend-overlay opacity-100" />
+      </div>
+    );
+  }
+
   return (
     <>
       <Image
         fill
+        priority
         alt="Pablo"
         src={src}
         className="
