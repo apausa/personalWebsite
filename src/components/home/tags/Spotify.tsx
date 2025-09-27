@@ -30,7 +30,7 @@ export default function Spotify({ className }: { className: string }) {
           <span>{recentlyPlayed.error}</span>
         ) : (
           <a
-            className="no-underline hover:underline font-bold break-words"
+            className="no-underline hover:underline font-bold break-words animate-pulse"
             href={recentlyPlayed?.link}
             rel="noreferrer"
             target="_blank"
