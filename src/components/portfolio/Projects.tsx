@@ -7,7 +7,16 @@ export default function Projects({ className }: { className: string }) {
       <h3 className="font-bold text-xl">Recent Projects</h3>
       <ul className="flex flex-col gap-4">
         <li className="flex flex-col">
-          <h4 className="font-semibold">{projects[0].name}</h4>
+          <h4 className="font-semibold">
+            <a
+              className="hover:underline"
+              href={projects[0].href}
+              rel="noreferrer"
+              target="_blank"
+            >
+              {projects[0].name}
+            </a>
+          </h4>
           <p>{projects[0].description}</p>
         </li>
         <li>

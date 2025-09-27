@@ -9,7 +9,8 @@ export const description = [
 
 export const projects = [
   {
-    name: "Personal website",
+    name: "Personal Website",
+    href: "https://github.com/apausa/personalWebsite",
     description:
       "Full Stack Web Application developed with Next.js and TypeScript. Fetching data from the Spotify API, and featuring generative art using p5.js.",
   },

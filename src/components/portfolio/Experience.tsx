@@ -6,10 +6,19 @@ export default function Experience({ className }: { className: string }) {
       <h3 className="font-bold text-xl">Recent Experience</h3>
       <ul className="flex flex-col gap-4">
         <li className="flex flex-col">
-          <h4 className="font-semibold">CERN</h4>
+          <h4 className="font-semibold">
+            <a
+              className="hover:underline"
+              href="https://home.cern/"
+              rel="noreferrer"
+              target="_blank"
+            >
+              CERN
+            </a>
+          </h4>
           <p>Software Engineering Intern</p>
           <p>Geneva, Switzerland</p>
-          <p>2023</p>
+          <p>Jul - Sep 2023</p>
         </li>
         <li>
           <a
