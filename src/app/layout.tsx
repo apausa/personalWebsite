@@ -1,4 +1,5 @@
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Montserrat } from "next/font/google";
 
 import P5Sketch from "@/components/Background";
@@ -41,6 +42,7 @@ export default function RootLayout({
           defaultTheme="dark"
         >
           <Analytics />
+          <SpeedInsights />
           <P5Sketch />
           {children}
         </ThemeProvider>
