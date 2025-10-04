@@ -22,7 +22,7 @@ export default function Projects({ className }: { className: string }) {
         <li>
           <a
             className="text-custom-red dark:text-custom-green no-underline hover:underline font-semibold"
-            href="https://www.linkedin.com/in/apausa/"
+            href="https://github.com/apausa"
             rel="noreferrer"
             target="_blank"
           >
