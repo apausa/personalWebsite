@@ -49,7 +49,7 @@ export default function Home() {
             <Spotify className="" />
             <Time className="" />
           </div>
-          <Carrousel className="col-span-6 xs:col-span-2" />
+          {/* <Carrousel className="col-span-6 xs:col-span-2" /> */}
         </div>
       </main>
       <aside
