@@ -14,7 +14,7 @@ export default function Highlights({ className }: { className: string }) {
             <span className="ml-2">
               <a
                 className="text-custom-red dark:text-custom-green no-underline hover:underline"
-                href="https://repository.cern/records/f94q8-vhq71"
+                href="https://www.linkedin.com/in/apausa/overlay/projects/1615443083/multiple-media-viewer/?profileId=ACoAAC6iOaEBR0LVtIZMoshXghrBr3oUTrDjBRY&treasuryMediaId=1757269895901"
                 rel="noreferrer"
                 target="_blank"
               >
