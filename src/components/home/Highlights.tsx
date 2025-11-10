@@ -40,7 +40,7 @@ export default function Highlights({ className }: { className: string }) {
               >
                 Nova
               </a>
-              , creative coding, &apos;build in public&apos; circles...
+              , creative coding, &apos;build in public&apos;...
             </span>
           </li>
           <li>

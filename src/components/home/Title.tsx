@@ -5,10 +5,9 @@ import { cn } from "@/lib/utils/tailwind";
 export default function Title({ className }: { className: string }) {
   return (
     <section className={cn("flex flex-col gap-2", className)}>
-      <h1 className="text-3xl xs:text-4xl font-bold">Pablo Apausa</h1>
-      <h2 className="text-xl xs:text-2xl">
-        Currently in Artificial Intelligence at Technical University of Madrid
-        and working on side projects
+      <h1 className="text-4xl font-bold">Pablo Apausa</h1>
+      <h2 className="text-2xl">
+        Software Engineer and Designer — MS in Artificial Intelligence
       </h2>
     </section>
   );

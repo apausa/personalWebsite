@@ -40,7 +40,8 @@ export default function Education({ className }: { className: string }) {
               target="_blank"
             >
               Universitat de Barcelona
-            </a>
+            </a>{" "}
+            / UOC
           </h4>
           <p>Bachelor of Arts - BA, Digital Design</p>
         </li>
