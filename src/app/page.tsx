@@ -16,11 +16,11 @@ import { ModeToggle } from "@/components/ui/toggle";
 
 export default function Home() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col xl:flex-row xl:justify-between">
       <main
         className="
         min-w-sm
-        max-w-3xl
+        max-w-4xl
 
         flex
         flex-col
@@ -28,15 +28,15 @@ export default function Home() {
         justify-between
         gap-4
         min-h-dvh
-        relative
-
         mx-auto
+
+        relative
         px-4
         pt-12
         pb-16
         "
       >
-        <div className="fixed right-4 top-12 z-4 md:absolute">
+        <div className="fixed right-4 top-12 z-1 xs:absolute">
           <ModeToggle />
         </div>
         <div className="grid grid-cols-6 gap-4 justify-center justify-items">
@@ -57,20 +57,21 @@ export default function Home() {
           {/* <Carrousel className="col-span-6 md:col-span-2" /> */}
         </div>
       </main>
-      <aside
+      {/* <aside
         className="
-        hidden
-        
+        xl:w-xl
         flex
         flex-col
         bg-input/30
         border-t
+        xl:border-t-0
+        xl:border-l
       "
       >
         <div
           className="
           min-w-sm
-          max-w-3xl
+          max-w-4xl
 
           grid
           gap-4
@@ -79,6 +80,8 @@ export default function Home() {
           px-4
           pt-12
           pb-16
+          xl:p-16
+          xl:pl-12
           "
         >
           <Education className="col-span-6" />
@@ -87,7 +90,7 @@ export default function Home() {
           <Separator className="col-span-6" />
           <Projects className="col-span-6" />
         </div>
-      </aside>
+      </aside> */}
     </div>
   );
 }
