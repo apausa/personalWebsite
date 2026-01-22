@@ -1,9 +1,10 @@
 "use client";
 
+import { useEffect, useState } from "react";
+
 import About from "@/components/home/About";
 import Highlights from "@/components/home/Highlights";
 import Links from "@/components/home/Links";
-import Contact from "@/components/home/tags/Contact";
 import Place from "@/components/home/tags/Place";
 import Spotify from "@/components/home/tags/Spotify";
 import Time from "@/components/home/tags/Time";
@@ -15,12 +16,28 @@ import { Separator } from "@/components/ui/separator";
 import { ModeToggle } from "@/components/ui/toggle";
 
 export default function Home() {
+  const [time, setTime] = useState<Date | null>(null);
+
+  useEffect(() => {
+    // Set initial time after mount to avoid hydration mismatch
+    setTime(new Date());
+
+    const interval = setInterval(() => {
+      setTime(new Date());
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="flex flex-col xl:flex-row xl:justify-between">
+      <div className="fixed right-4 md:right-8 top-8 z-1 xs:absolute">
+        <ModeToggle />
+      </div>
       <main
         className="
         min-w-sm
-        max-w-4xl
+        max-w-2xl
 
         flex
         flex-col
@@ -32,27 +49,22 @@ export default function Home() {
 
         relative
         px-4
-        pt-12
-        pb-16
+        pt-8
+        pb-12
         "
       >
-        <div className="fixed right-4 top-12 z-1 xs:absolute">
-          <ModeToggle />
-        </div>
         <div className="grid grid-cols-6 gap-4 justify-center justify-items">
           <Title className="col-span-6" />
-          <Contact className="col-span-6 md:col-span-2" />
-          <Place className="col-span-6 md:col-span-4 -mt-2 md:mt-0 " />
+          <Place className="col-span-6" />
+          <Spotify className="col-span-6 -mt-2 " />
           <Separator className="col-span-6" />
           <About className="col-span-6" />
-          <Separator className="col-span-6" />
           <Links className="col-span-6" />
           <Highlights className="col-span-6 md:col-span-6" />
         </div>
         <div className="grid grid-cols-6 gap-4">
           <div className="col-span-6 md:col-span-4 flex flex-col gap-2 justify-end">
-            <Spotify className="" />
-            <Time className="" />
+            <Time className="">{time}</Time>
           </div>
           {/* <Carrousel className="col-span-6 md:col-span-2" /> */}
         </div>
