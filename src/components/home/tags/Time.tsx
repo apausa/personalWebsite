@@ -1,25 +1,16 @@
 "use client";
 
-import { useEffect, useState } from "react";
-
 import { IconClockFilled } from "@tabler/icons-react";
 
 import { cn } from "@/lib/utils/tailwind";
 
-export default function Time({ className }: { className: string }) {
-  const [time, setTime] = useState<Date | null>(null);
-
-  useEffect(() => {
-    // Set initial time after mount to avoid hydration mismatch
-    setTime(new Date());
-
-    const interval = setInterval(() => {
-      setTime(new Date());
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, []);
-
+export default function Time({
+  className,
+  children: time,
+}: {
+  className: string;
+  children: Date | null;
+}) {
   // Show placeholder until hydrated to avoid mismatch
   if (!time) {
     return <div />;
