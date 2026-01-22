@@ -31,7 +31,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col xl:flex-row xl:justify-between">
-      <div className="fixed right-8 top-8 z-1 xs:absolute">
+      <div className="fixed right-4 md:right-8 top-8 z-1 xs:absolute">
         <ModeToggle />
       </div>
       <main
