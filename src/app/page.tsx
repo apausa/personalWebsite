@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import About from "@/components/home/About";
 import Highlights from "@/components/home/Highlights";
 import Links from "@/components/home/Links";
+import Contact from "@/components/home/tags/Contact";
 import Place from "@/components/home/tags/Place";
 import Spotify from "@/components/home/tags/Spotify";
 import Time from "@/components/home/tags/Time";
@@ -55,8 +56,8 @@ export default function Home() {
       >
         <div className="grid grid-cols-6 gap-4 justify-center justify-items">
           <Title className="col-span-6" />
-          <Place className="col-span-6" />
-          <Spotify className="col-span-6 -mt-2 " />
+          <Contact className="col-span-6" />
+          <Place className="col-span-6 -mt-2" />
           <Separator className="col-span-6" />
           <About className="col-span-6" />
           <Links className="col-span-6" />
@@ -64,6 +65,7 @@ export default function Home() {
         </div>
         <div className="grid grid-cols-6 gap-4">
           <div className="col-span-6 md:col-span-4 flex flex-col gap-2 justify-end">
+            <Spotify className="" />
             <Time className="">{time}</Time>
           </div>
           {/* <Carrousel className="col-span-6 md:col-span-2" /> */}
