@@ -1,6 +1,6 @@
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Montserrat } from "next/font/google";
+import { Montserrat, Newsreader } from "next/font/google";
 
 import P5Sketch from "@/components/Background";
 import { ThemeProvider } from "@/components/ui/theme-provider";
@@ -8,6 +8,12 @@ import { ThemeProvider } from "@/components/ui/theme-provider";
 import "./globals.css";
 
 import type { Metadata } from "next";
+
+const newsreader = Newsreader({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+  weight: ["200", "300", "400", "500", "600", "700", "800"],
+});
 
 const montserrat = Montserrat({
   variable: "--font-geist-sans",
@@ -28,7 +34,9 @@ export default function RootLayout({
     <html suppressHydrationWarning data-theme="light" lang="en">
       <body
         className={`
-          ${montserrat.variable}
+          ${newsreader.variable}
+          font-sans
+          text-lg
           antialiased
           bg-custom-foreground
           text-custom-background
