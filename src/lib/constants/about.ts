@@ -4,7 +4,8 @@ import {
 } from "@tabler/icons-react";
 
 export const description = [
-  "I learned programming by creative coding during high school, then built web and mobile apps while studying design at university. This led me to pursue computer science to deepen my understanding of theoretical foundations. I now specialize in deep learning, neural networks, and computer vision. With this interdisciplinary background spanning human-computer interaction to software engineering, I approach challenges with a holistic perspective.",
+  "I taught myself to code by making generative art in high school, then built web applications while studying digital design at university. This led me to computer science, where I got hooked on neural networks and deep learning.",
+  "Now I research computer vision at the Technical University of Madrid. This background from human-computer interaction to artificial intelligence lets me tackle problems from different perspectives.",
 ];
 
 export const projects = [
@@ -23,7 +24,7 @@ export const links = [
     icon: IconBrandLinkedinFilled,
   },
   {
-    name: "Github",
+    name: "GitHub",
     href: "https://github.com/apausa",
     icon: IconBrandGithubFilled,
   },
