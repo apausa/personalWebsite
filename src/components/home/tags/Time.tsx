@@ -30,7 +30,7 @@ export default function Time({
     .join("");
 
   return (
-    <p className={cn("min-w-0 break-words", className)}>
+    <p className={cn("min-w-0 break-words text-justify", className)}>
       <IconClockFilled className="w-4 h-4 mb-1 inline-block align-text-center mr-2" />
       {month} {day}, {year} • {hours}:{minutes}:{seconds} at {timezone}
     </p>

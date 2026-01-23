@@ -6,7 +6,7 @@ export default function Contact({ className }: { className: string }) {
   return (
     <p
       className={cn(
-        "text-custom-selection dark:text-custom-purple min-w-0 break-words",
+        "text-custom-selection dark:text-custom-purple min-w-0 break-words text-justify",
         className,
       )}
     >

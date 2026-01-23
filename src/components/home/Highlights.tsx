@@ -9,28 +9,30 @@ export default function Highlights({ className }: { className: string }) {
         <CardTitle>Some highlights</CardTitle>
       </CardHeader>
       <CardContent className="gap-0">
-        <ul className="list-disc list-inside">
+        <ul className="text-justify">
           <li>
             <span>
+              •{" "}
               <a
                 className="text-custom-red dark:text-custom-green no-underline hover:underline"
                 href="https://www.linkedin.com/in/apausa/overlay/projects/1615443083/multiple-media-viewer/?profileId=ACoAAC6iOaEBR0LVtIZMoshXghrBr3oUTrDjBRY&treasuryMediaId=1757269895901"
                 rel="noreferrer"
                 target="_blank"
               >
-                Helping ALICE researchers manage Monte Carlo methods.
+                Developing a simulations dashboard for ALICE researchers to
+                manage Monte Carlo methods.
               </a>
             </span>
           </li>
           <li>
             <span>
-              Graduating with dual bachelor&apos;s degrees in both arts and
+              • Graduating with dual bachelor&apos;s degrees in both arts and
               science.
             </span>
           </li>
           <li>
             <span>
-              CERN Alumni,{" "}
+              • CERN Alumni,{" "}
               <a
                 className="text-custom-red dark:text-custom-green no-underline hover:underline"
                 href="https://app.novatalent.com/open/certificate/DQV0HEHKGL6710HYNPW4Z1ZBL"
@@ -44,7 +46,7 @@ export default function Highlights({ className }: { className: string }) {
           </li>
           <li>
             <span>
-              Wondering what machines dream about in my master&apos;s program.
+              • Wondering what machines dream about in my master&apos;s program.
             </span>
           </li>
         </ul>
