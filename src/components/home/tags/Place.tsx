@@ -4,14 +4,17 @@ import { cn } from "@/lib/utils/tailwind";
 
 export default function Place({ className }: { className: string }) {
   return (
-    <div
+    <p
       className={cn(
-        "flex items-center gap-2 text-custom-selection dark:text-custom-purple",
+        "min-w-0 break-words text-custom-selection dark:text-custom-purple",
         className,
       )}
     >
-      <IconWorld className="w-4 h-4 flex-shrink-0" stroke={2} />
-      <p className="min-w-0 break-words">Geneva, Switzerland</p>
-    </div>
+      <IconWorld
+        className="w-4 h-4 mb-1 inline-block align-text-center mr-2"
+        stroke={2}
+      />
+      Geneva, Switzerland
+    </p>
   );
 }

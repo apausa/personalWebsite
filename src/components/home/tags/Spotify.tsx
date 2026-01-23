@@ -22,28 +22,21 @@ export default function Spotify({ className }: { className: string }) {
   }, []);
 
   return (
-    <div
-      className={cn(
-        "flex items-center gap-2 text-custom-selection dark:text-custom-purple",
-        className,
+    <p className={cn("min-w-0 break-words", className)}>
+      <IconBrandSpotifyFilled className="w-4 h-4 mb-1 inline-block align-text-center mr-2" />
+      Last played •{" "}
+      {"error" in recentlyPlayed ? (
+        <span>{recentlyPlayed.error}</span>
+      ) : (
+        <a
+          className="no-underline hover:underline font-bold break-words animate-pulse"
+          href={recentlyPlayed?.link}
+          rel="noreferrer"
+          target="_blank"
+        >
+          {recentlyPlayed?.name}
+        </a>
       )}
-    >
-      <IconBrandSpotifyFilled className="w-4 h-4 flex-shrink-0" />
-      <p className="min-w-0 break-words">
-        Last played •{" "}
-        {"error" in recentlyPlayed ? (
-          <span>{recentlyPlayed.error}</span>
-        ) : (
-          <a
-            className="no-underline hover:underline font-bold break-words animate-pulse"
-            href={recentlyPlayed?.link}
-            rel="noreferrer"
-            target="_blank"
-          >
-            {recentlyPlayed?.name}
-          </a>
-        )}
-      </p>
-    </div>
+    </p>
   );
 }
