@@ -31,7 +31,7 @@ export default function Highlights({ className }: { className: string }) {
             <span>
               • CERN Alumni,{" "}
               <a
-                className="underline dark:hover:text-custom-purple hover:text-custom-red"
+                className="hover:underline dark:text-custom-green text-custom-red"
                 href="https://app.novatalent.com/open/certificate/DQV0HEHKGL6710HYNPW4Z1ZBL"
                 rel="noreferrer"
                 target="_blank"

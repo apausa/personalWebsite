@@ -6,7 +6,7 @@ export default function Place({ className }: { className: string }) {
   return (
     <p
       className={cn(
-        "min-w-0 break-words text-custom-red dark:text-custom-purple text-justify",
+        "min-w-0 break-words text-custom-selection dark:text-custom-purple text-justify",
         className,
       )}
     >
