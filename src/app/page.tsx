@@ -10,9 +10,6 @@ import Place from "@/components/home/tags/Place";
 import Spotify from "@/components/home/tags/Spotify";
 import Time from "@/components/home/tags/Time";
 import Title from "@/components/home/Title";
-import Education from "@/components/portfolio/Education";
-import Experience from "@/components/portfolio/Experience";
-import Projects from "@/components/portfolio/Projects";
 import { Separator } from "@/components/ui/separator";
 import { ModeToggle } from "@/components/ui/toggle";
 
@@ -96,11 +93,6 @@ export default function Home() {
           xl:pl-12
           "
         >
-          <Education className="col-span-6" />
-          <Separator className="col-span-6" />
-          <Experience className="col-span-6" />
-          <Separator className="col-span-6" />
-          <Projects className="col-span-6" />
         </div>
       </aside> */}
     </div>

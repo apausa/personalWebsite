@@ -126,7 +126,7 @@
 }
 
 ::selection {
-  background: var(--color-custom-purple);
+  background: var(--color-custom-green);
   color: var(--color-custom-background);
 }
 
