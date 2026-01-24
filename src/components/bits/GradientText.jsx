@@ -82,23 +82,23 @@ export default function GradientText({
     if (pauseOnHover) setIsPaused(false);
   }, [pauseOnHover]);
 
-  const gradientAngle =
-    direction === "horizontal"
-      ? "to right"
-      : direction === "vertical"
-        ? "to bottom"
-        : "to bottom right";
+  const gradientAngles = {
+    horizontal: "to right",
+    vertical: "to bottom",
+    diagonal: "to bottom right",
+  };
+  const gradientAngle = gradientAngles[direction] ?? "to bottom right";
   // Duplicate first color at the end for seamless looping
   const gradientColors = [...colors, colors[0]].join(", ");
 
+  const backgroundSizes = {
+    horizontal: "300% 100%",
+    vertical: "100% 300%",
+    diagonal: "300% 300%",
+  };
   const gradientStyle = {
     backgroundImage: `linear-gradient(${gradientAngle}, ${gradientColors})`,
-    backgroundSize:
-      direction === "horizontal"
-        ? "300% 100%"
-        : direction === "vertical"
-          ? "100% 300%"
-          : "300% 300%",
+    backgroundSize: backgroundSizes[direction] ?? "300% 300%",
     backgroundRepeat: "repeat",
   };
 
