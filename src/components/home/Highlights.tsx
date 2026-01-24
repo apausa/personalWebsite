@@ -17,16 +17,8 @@ export default function Highlights({ className }: { className: string }) {
         <ul className="text-justify">
           <li>
             <span>
-              •{" "}
-              <a
-                className="text-custom-red dark:text-custom-green no-underline hover:underline"
-                href="https://www.linkedin.com/in/apausa/overlay/projects/1615443083/multiple-media-viewer/?profileId=ACoAAC6iOaEBR0LVtIZMoshXghrBr3oUTrDjBRY&treasuryMediaId=1757269895901"
-                rel="noreferrer"
-                target="_blank"
-              >
-                Developing a simulations dashboard for ALICE researchers to
-                manage Monte Carlo methods.
-              </a>
+              • Developing a simulations dashboard for ALICE researchers to
+              manage Monte Carlo methods.
             </span>
           </li>
           <li>
@@ -39,7 +31,7 @@ export default function Highlights({ className }: { className: string }) {
             <span>
               • CERN Alumni,{" "}
               <a
-                className="text-custom-red dark:text-custom-green no-underline hover:underline"
+                className="underline dark:hover:text-custom-purple hover:text-custom-red"
                 href="https://app.novatalent.com/open/certificate/DQV0HEHKGL6710HYNPW4Z1ZBL"
                 rel="noreferrer"
                 target="_blank"
