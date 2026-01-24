@@ -32,7 +32,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col xl:flex-row xl:justify-between">
-      <div className="fixed right-4 md:right-8 top-8 z-1 xs:absolute">
+      <div className="fixed right-4 md:right-8 top-8 z-2 xs:absolute">
         <ModeToggle />
       </div>
       <main
@@ -63,13 +63,11 @@ export default function Home() {
           <Links className="col-span-6" />
           <Highlights className="col-span-6 md:col-span-6" />
         </div>
-        <div className="grid grid-cols-6 gap-4">
-          <div className="col-span-6 md:col-span-4 flex flex-col gap-2 justify-end">
-            <Spotify className="" />
-            <Time className="">{time}</Time>
-          </div>
-          {/* <Carrousel className="col-span-6 md:col-span-2" /> */}
+        <div className="col-span-6 flex flex-col gap-2">
+          <Spotify className="" />
+          <Time className="">{time}</Time>
         </div>
+        {/* <Carrousel className="col-span-6 md:col-span-2" /> */}
       </main>
       {/* <aside
         className="
