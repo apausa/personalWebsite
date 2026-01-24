@@ -10,13 +10,13 @@ import "./globals.css";
 import type { Metadata } from "next";
 
 const newsreader = Newsreader({
-  variable: "--font-geist-sans",
+  variable: "--font-newsreader",
   subsets: ["latin"],
   weight: ["200", "300", "400", "500", "600", "700", "800"],
 });
 
 const montserrat = Montserrat({
-  variable: "--font-geist-sans",
+  variable: "--font-montserrat",
   subsets: ["latin"],
 });
 
@@ -35,7 +35,8 @@ export default function RootLayout({
       <body
         className={`
           ${newsreader.variable}
-          font-sans
+          ${montserrat.variable}
+          font-serif
           text-lg
           antialiased
           bg-custom-foreground
