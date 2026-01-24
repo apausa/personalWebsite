@@ -4,9 +4,14 @@ import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 
 export default function Highlights({ className }: { className: string }) {
   return (
-    <Card className={cn("flex flex-col gap-2 bg-0 px-0", className)}>
-      <CardHeader className="font-bold gap-0">
-        <CardTitle>Some highlights</CardTitle>
+    <Card
+      className={cn(
+        "flex flex-col gap-2 bg-0 px-0 font-sans text-base",
+        className,
+      )}
+    >
+      <CardHeader className="gap-0">
+        <CardTitle className="">Some highlights</CardTitle>
       </CardHeader>
       <CardContent className="gap-0">
         <ul className="text-justify">
