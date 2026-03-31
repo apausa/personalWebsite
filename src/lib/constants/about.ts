@@ -3,7 +3,7 @@ import {
   IconBrandLinkedinFilled,
 } from "@tabler/icons-react";
 
-export const links = [
+const links = [
   {
     name: "LinkedIn",
     href: "https://www.linkedin.com/in/apausa/",
@@ -15,3 +15,5 @@ export const links = [
     icon: IconBrandGithubFilled,
   },
 ];
+
+export default links;

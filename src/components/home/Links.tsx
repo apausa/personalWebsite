@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
-import { links } from "@/lib/constants/about";
+import links from "@/lib/constants/about";
 import { cn } from "@/lib/utils/tailwind";
 
 export default function Links({ className }: { className: string }) {
