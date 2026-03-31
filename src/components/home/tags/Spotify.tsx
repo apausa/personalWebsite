@@ -22,7 +22,7 @@ export default function Spotify({ className }: { className: string }) {
   }, []);
 
   return (
-    <p className={cn("min-w-0 break-words", className)}>
+    <p className={cn("min-w-0 break-words text-justify", className)}>
       <IconBrandSpotifyFilled className="w-4 h-4 mb-1 inline-block align-text-center mr-2 text-justify" />
       Last played •{" "}
       {"error" in recentlyPlayed ? (

@@ -2,8 +2,6 @@
 
 import { useEffect, useState } from "react";
 
-import About from "@/components/home/About";
-import Highlights from "@/components/home/Highlights";
 import Links from "@/components/home/Links";
 import Contact from "@/components/home/tags/Contact";
 import Place from "@/components/home/tags/Place";
@@ -36,15 +34,12 @@ export default function Home() {
         className="
         min-w-sm
         max-w-2xl
-
         flex
         flex-col
-
-        justify-between
+        justify-center
         gap-4
         min-h-dvh
         mx-auto
-
         relative
         px-4
         pt-8
@@ -53,48 +48,19 @@ export default function Home() {
       >
         <div className="grid grid-cols-6 gap-4 justify-center justify-items">
           <Title className="col-span-6" />
-          <Contact className="col-span-6" />
-          <Place className="col-span-6 -mt-2" />
+          <div className="col-span-6 flex flex-col gap-2 items-center">
+            <Contact className="" />
+            <Place className="" />
+          </div>
           <Separator className="col-span-6" />
-          <About className="col-span-6" />
           <Links className="col-span-6" />
-          <Highlights className="col-span-6 md:col-span-6" />
+          <Separator className="col-span-6 invisible" />
+          <div className="col-span-6 flex flex-col gap-2">
+            <Spotify className="" />
+            <Time className="">{time}</Time>
+          </div>
         </div>
-        <div className="col-span-6 flex flex-col gap-2">
-          <Spotify className="" />
-          <Time className="">{time}</Time>
-        </div>
-        {/* <Carrousel className="col-span-6 md:col-span-2" /> */}
       </main>
-      {/* <aside
-        className="
-        xl:w-xl
-        flex
-        flex-col
-        bg-input/30
-        border-t
-        xl:border-t-0
-        xl:border-l
-      "
-      >
-        <div
-          className="
-          min-w-sm
-          max-w-4xl
-
-          grid
-          gap-4
-
-          mx-auto
-          px-4
-          pt-12
-          pb-16
-          xl:p-16
-          xl:pl-12
-          "
-        >
-        </div>
-      </aside> */}
     </div>
   );
 }
