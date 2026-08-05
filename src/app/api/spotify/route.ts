@@ -38,7 +38,7 @@ async function getRefreshToken() {
   const data: SpotifyToken = await response.json();
 
   // Update refresh and access tokens in Redis
-  await redis.set("spotify:refresh", data.refresh_token);
+  await redis.set("spotify:refresh", data.refresh_token ?? refreshToken);
   await redis.set("spotify:access", data.access_token);
 
   return data.access_token;
