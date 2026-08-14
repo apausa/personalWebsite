@@ -7,7 +7,7 @@ import React, { useEffect, useRef } from "react";
 
 import { useTheme } from "next-themes";
 
-import asciiOrb from "@/lib/ascii-orb";
+import { asciiOrb } from "@/lib/ascii-orb";
 
 import type p5 from "p5";
 
