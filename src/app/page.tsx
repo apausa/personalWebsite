@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 
 import { Links } from "@/components/page/links";
 import { ModeToggle } from "@/components/page/mode-toggle";
+import { P5Sketch } from "@/components/page/p5-sketch";
 import { Place } from "@/components/page/place";
 import { Spotify } from "@/components/page/spotify";
 import { Time } from "@/components/page/time";
@@ -25,7 +26,8 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="flex flex-col xl:flex-row xl:justify-between">
+    <>
+      <P5Sketch />
       <div className="fixed right-4 md:right-8 top-8 z-2 xs:absolute">
         <ModeToggle />
       </div>
@@ -64,6 +66,6 @@ export default function Home() {
           </div>
         </div>
       </main>
-    </div>
+    </>
   );
 }
