@@ -4,19 +4,20 @@ import { Montserrat, Newsreader } from "next/font/google";
 
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { METADATA } from "@/lib/constants";
+import { cn } from "@/lib/utils";
 
 import "./globals.css";
 
 import type { Metadata } from "next";
 
 const newsreader = Newsreader({
-  variable: "--font-newsreader",
+  variable: "--font-serif",
   subsets: ["latin"],
   weight: ["200", "300", "400", "500", "600", "700", "800"],
 });
 
 const montserrat = Montserrat({
-  variable: "--font-montserrat",
+  variable: "--font-sans",
   subsets: ["latin"],
 });
 
@@ -31,12 +32,12 @@ export default function RootLayout({
     <html
       suppressHydrationWarning
       lang="en"
-      className={`
-        ${newsreader.variable}
-        ${montserrat.variable}
-        font-serif
-        antialiased
-      `}
+      className={cn(
+        "antialiased",
+        newsreader.variable,
+        montserrat.variable,
+        "font-serif",
+      )}
     >
       <body
         className={`

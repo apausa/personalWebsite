@@ -10,15 +10,13 @@ export function Links({ className }: { className: string }) {
       {LINKS.map((link) => (
         <Button
           key={link.name}
-          asChild
           className="col-span-6 bg-input/30 hover:bg-input/50 font-sans font-semibold"
+          render={<Link href={link.href} target="_blank" />}
           size="lg"
           variant="outline"
         >
-          <Link href={link.href} target="_blank">
-            <link.icon />
-            {link.name}
-          </Link>
+          <link.icon />
+          {link.name}
         </Button>
       ))}
     </section>
