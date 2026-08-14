@@ -4,12 +4,12 @@ import { useEffect, useState } from "react";
 
 import Contact from "@/components/page/Contact";
 import Links from "@/components/page/Links";
+import ModeToggle from "@/components/page/ModeToggle";
 import Place from "@/components/page/Place";
 import Spotify from "@/components/page/Spotify";
 import Time from "@/components/page/Time";
 import Title from "@/components/page/Title";
 import { Separator } from "@/components/ui/separator";
-import { ModeToggle } from "@/components/ui/toggle";
 
 export default function Home() {
   const [time, setTime] = useState<Date | null>(null);
