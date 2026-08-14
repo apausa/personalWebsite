@@ -4,9 +4,9 @@ import { Button } from "@/components/ui/button";
 import { LINKS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
-export function Links({ className }: { className: string }) {
+export function Links() {
   return (
-    <section className={cn("grid grid-cols-6 gap-4", className)}>
+    <section className={cn("grid grid-cols-6 gap-4")}>
       {LINKS.map((link) => (
         <Button
           key={link.name}

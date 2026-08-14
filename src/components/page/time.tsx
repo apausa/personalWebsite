@@ -4,13 +4,7 @@ import { IconClockFilled } from "@tabler/icons-react";
 
 import { cn } from "@/lib/utils";
 
-export function Time({
-  className,
-  children: time,
-}: {
-  className: string;
-  children: Date | null;
-}) {
+export function Time({ children: time }: { children: Date | null }) {
   // Show placeholder until hydrated to avoid mismatch
   if (!time) {
     return <div />;
@@ -30,7 +24,7 @@ export function Time({
     .join("");
 
   return (
-    <p className={cn("min-w-0 break-words text-justify", className)}>
+    <p className={cn("min-w-0 break-words text-justify")}>
       <IconClockFilled className="w-4 h-4 mb-1 inline-block align-text-center mr-2" />
       {month} {day}, {year} • {hours}:{minutes}:{seconds} at {timezone}
     </p>
