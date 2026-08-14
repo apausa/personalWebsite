@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { LINKS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
-export default function Links({ className }: { className: string }) {
+export function Links({ className }: { className: string }) {
   return (
     <section className={cn("grid grid-cols-6 gap-4", className)}>
       {LINKS.map((link) => (

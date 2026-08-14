@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 
 import type { SpotifyResponse } from "@/lib/types/home";
 
-export default function Spotify({ className }: { className: string }) {
+export function Spotify({ className }: { className: string }) {
   const [recentlyPlayed, setRecentlyPlayed] = useState<SpotifyResponse>({
     error: "Loading song...",
   });

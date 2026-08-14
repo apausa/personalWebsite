@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 
-export default function Contact({ className }: { className: string }) {
+export function Contact({ className }: { className: string }) {
   return (
     <p className={cn("min-w-0 break-words text-center", className)}>
       Software Engineer at CERN{" "}

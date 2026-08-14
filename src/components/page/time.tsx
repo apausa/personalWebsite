@@ -4,7 +4,7 @@ import { IconClockFilled } from "@tabler/icons-react";
 
 import { cn } from "@/lib/utils";
 
-export default function Time({
+export function Time({
   className,
   children: time,
 }: {

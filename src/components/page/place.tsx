@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 
-export default function Place({ className }: { className: string }) {
+export function Place({ className }: { className: string }) {
   return (
     <p className={cn("min-w-0 break-words text-center", className)}>
       <a

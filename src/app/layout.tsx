@@ -2,8 +2,8 @@ import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Montserrat, Newsreader } from "next/font/google";
 
-import P5Sketch from "@/components/P5Sketch";
-import { ThemeProvider } from "@/components/ui/theme-provider";
+import { P5Sketch } from "@/components/p5-sketch";
+import { ThemeProvider } from "@/components/providers/theme-provider";
 import { METADATA } from "@/lib/constants";
 
 import "./globals.css";
@@ -31,7 +31,6 @@ export default function RootLayout({
   return (
     <html
       suppressHydrationWarning
-      data-theme="light"
       lang="en"
       className={`
         ${newsreader.variable}
@@ -51,7 +50,7 @@ export default function RootLayout({
         <ThemeProvider
           disableTransitionOnChange
           attribute="class"
-          defaultTheme="dark"
+          defaultTheme="system"
         >
           <Analytics />
           <SpeedInsights />
