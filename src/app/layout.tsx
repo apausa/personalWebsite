@@ -2,7 +2,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Montserrat, Newsreader } from "next/font/google";
 
-import { P5Sketch } from "@/components/p5-sketch";
+import { P5Sketch } from "@/components/page/p5-sketch";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { METADATA } from "@/lib/constants";
 
