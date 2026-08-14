@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 
+import About from "@/components/page/about";
 import { Links } from "@/components/page/links";
 import { ModeToggle } from "@/components/page/mode-toggle";
 import { P5Sketch } from "@/components/page/p5-sketch";
@@ -28,44 +29,51 @@ export default function Home() {
   return (
     <>
       <P5Sketch />
-      <div className="fixed right-4 md:right-8 top-8 z-2 xs:absolute">
-        <ModeToggle />
-      </div>
-      <main
+      <div
         className="
-        min-w-sm
         max-w-2xl
         flex
         flex-col
-        justify-center
-        gap-4
+        md:justify-center
         min-h-dvh
         mx-auto
-        relative
-        px-4
+        pl-4
+        pr-4
         pt-8
         pb-12
         "
       >
-        <div className="grid grid-cols-6 gap-4 justify-center justify-items">
-          <section className="flex flex-col gap-2 items-center col-span-6">
-            <h1 className="text-4xl font-semibold dark:text-custom-purple">
-              {TITLE}
-            </h1>
-          </section>
-          <div className="col-span-6 flex flex-col gap-2 items-center">
-            <p className="min-w-0 break-words text-center">{DESCRIPTION}</p>
-            <Place className="" />
-          </div>
+        <div className="fixed right-4 md:right-8 top-8 z-2 xs:absolute text-lg">
+          <ModeToggle />
+        </div>
+        <div className="grid grid-cols-6 gap-4 text-lg">
+          <h1 className="col-span-6 text-4xl font-bold dark:text-custom-purple text-center">
+            {TITLE}
+          </h1>
+          <h2 className="col-span-6 text-2xl text-center">{DESCRIPTION}</h2>
+
           <Separator className="col-span-6" />
-          <Links className="col-span-6" />
+
+          {/* Main */}
+          <div className="col-span-6">
+            <Links />
+          </div>
+          {/* <div className="col-span-6 md:col-span-2 min-h-32 bg-red-50" />
+          <div className="col-span-6">
+            <About />
+          </div> */}
+
           <Separator className="col-span-6 invisible" />
-          <div className="col-span-6 flex flex-col gap-2">
-            <Spotify className="" />
-            <Time className="">{time}</Time>
+
+          {/* Footer */}
+          <div className="col-span-6">
+            <Spotify />
+          </div>
+          <div className="col-span-6 -mt-2 md:mt-0">
+            <Time>{time}</Time>
           </div>
         </div>
-      </main>
+      </div>
     </>
   );
 }
