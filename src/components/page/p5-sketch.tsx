@@ -7,11 +7,11 @@ import React, { useEffect, useRef } from "react";
 
 import { useTheme } from "next-themes";
 
-import asciiOrb from "@/lib/sketches/asciiOrb";
+import { asciiOrb } from "@/lib/ascii-orb";
 
 import type p5 from "p5";
 
-const P5Sketch = (): React.ReactElement => {
+export const P5Sketch = (): React.ReactElement => {
   const containerRef = useRef<HTMLDivElement>(null);
   const p5Instance = useRef<p5 | null>(null);
   const { resolvedTheme } = useTheme();
@@ -52,5 +52,3 @@ const P5Sketch = (): React.ReactElement => {
     },
   });
 };
-
-export default P5Sketch;

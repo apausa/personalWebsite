@@ -2,28 +2,26 @@ import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Montserrat, Newsreader } from "next/font/google";
 
-import P5Sketch from "@/components/Background";
-import { ThemeProvider } from "@/components/ui/theme-provider";
+import { ThemeProvider } from "@/components/providers/theme-provider";
+import { METADATA } from "@/lib/constants";
+import { cn } from "@/lib/utils";
 
 import "./globals.css";
 
 import type { Metadata } from "next";
 
 const newsreader = Newsreader({
-  variable: "--font-newsreader",
+  variable: "--font-serif",
   subsets: ["latin"],
   weight: ["200", "300", "400", "500", "600", "700", "800"],
 });
 
 const montserrat = Montserrat({
-  variable: "--font-montserrat",
+  variable: "--font-sans",
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Pablo Apausa",
-  description: "Personal website",
-};
+export const metadata: Metadata = METADATA;
 
 export default function RootLayout({
   children,
@@ -31,14 +29,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html suppressHydrationWarning data-theme="light" lang="en">
+    <html
+      suppressHydrationWarning
+      lang="en"
+      className={cn(
+        "antialiased",
+        newsreader.variable,
+        montserrat.variable,
+        "font-serif",
+      )}
+    >
       <body
         className={`
-          ${newsreader.variable}
-          ${montserrat.variable}
-          font-serif
-          text-lg
-          antialiased
           bg-custom-foreground
           text-custom-background
           dark:bg-custom-background
@@ -48,11 +50,10 @@ export default function RootLayout({
         <ThemeProvider
           disableTransitionOnChange
           attribute="class"
-          defaultTheme="dark"
+          defaultTheme="system"
         >
           <Analytics />
           <SpeedInsights />
-          <P5Sketch />
           {children}
         </ThemeProvider>
       </body>

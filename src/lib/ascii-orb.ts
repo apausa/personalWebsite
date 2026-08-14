@@ -2,7 +2,7 @@
 
 import type p5 from "p5";
 
-const asciiOrb =
+export const asciiOrb =
   (theme?: string) =>
   (p: p5): void => {
     const getThemeColor = () => (theme === "light" ? "#8be9fd" : "#44475a");
@@ -168,5 +168,3 @@ const asciiOrb =
       computeDimension();
     };
   };
-
-export default asciiOrb;

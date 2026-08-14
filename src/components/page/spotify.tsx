@@ -3,12 +3,12 @@ import { useEffect, useState } from "react";
 import { IconBrandSpotifyFilled } from "@tabler/icons-react";
 import axios from "axios";
 
-import { cn } from "@/lib/utils/tailwind";
+import { cn } from "@/lib/utils";
 
-import type { SpotifyResponse } from "@/lib/types/home";
+import type { Response } from "@/lib/types";
 
-export default function Spotify({ className }: { className: string }) {
-  const [recentlyPlayed, setRecentlyPlayed] = useState<SpotifyResponse>({
+export function Spotify() {
+  const [recentlyPlayed, setRecentlyPlayed] = useState<Response>({
     error: "Loading song...",
   });
 
@@ -22,7 +22,7 @@ export default function Spotify({ className }: { className: string }) {
   }, []);
 
   return (
-    <p className={cn("min-w-0 break-words text-justify", className)}>
+    <p className={cn("min-w-0 break-words text-justify")}>
       <IconBrandSpotifyFilled className="w-4 h-4 mb-1 inline-block align-text-center mr-2 text-justify" />
       Last played •{" "}
       {"error" in recentlyPlayed ? (

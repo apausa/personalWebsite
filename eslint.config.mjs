@@ -83,6 +83,7 @@ const customRules = [
       "@typescript-eslint/explicit-module-boundary-types": "off",
       "no-plusplus": "off",
       "react/jsx-fragments": "off",
+      "import-x/prefer-default-export": "off",
     },
   },
 ];
