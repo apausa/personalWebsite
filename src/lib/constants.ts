@@ -7,12 +7,27 @@ import {
 
 export const TITLE = "Pablo Apausa";
 
+export const PAGE_URL = "https://www.apausa.dev/";
+
 export const DESCRIPTION =
   "Software Engineer at CERN FCC Study — MS in Artificial Intelligence";
 
 export const METADATA = {
   title: TITLE,
   description: DESCRIPTION,
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    url: PAGE_URL,
+    siteName: TITLE,
+    images: [
+      {
+        url: "https://avatars.githubusercontent.com/u/74920898", // Must be an absolute URL
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
 };
 
 export const ABOUT = [
