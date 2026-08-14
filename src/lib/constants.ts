@@ -5,7 +5,8 @@ import {
 
 export const TITLE = "Pablo Apausa";
 
-export const DESCRIPTION = "Personal website";
+export const DESCRIPTION =
+  "Software Engineer at CERN — MS in Artificial Intelligence";
 
 export const METADATA = {
   title: TITLE,
@@ -26,5 +27,6 @@ export const LINKS = [
 ];
 
 export const SPOTIFY_URL_TOKEN = "https://accounts.spotify.com/api/token";
+
 export const SPOTIFY_URL_PLAYER =
   "https://api.spotify.com/v1/me/player/recently-played?limit=1";
