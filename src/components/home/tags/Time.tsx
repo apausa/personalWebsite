@@ -2,7 +2,7 @@
 
 import { IconClockFilled } from "@tabler/icons-react";
 
-import { cn } from "@/lib/utils/tailwind";
+import { cn } from "@/lib/utils";
 
 export default function Time({
   className,

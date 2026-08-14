@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { IconBrandSpotifyFilled } from "@tabler/icons-react";
 import axios from "axios";
 
-import { cn } from "@/lib/utils/tailwind";
+import { cn } from "@/lib/utils";
 
 import type { SpotifyResponse } from "@/lib/types/home";
 

@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils/tailwind";
+import { cn } from "@/lib/utils";
 
 export default function Place({ className }: { className: string }) {
   return (
