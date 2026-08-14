@@ -1,13 +1,13 @@
 import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
-import links from "@/lib/constants/about";
+import { LINKS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
 export default function Links({ className }: { className: string }) {
   return (
     <section className={cn("grid grid-cols-6 gap-4", className)}>
-      {links.map((link) => (
+      {LINKS.map((link) => (
         <Button
           key={link.name}
           asChild

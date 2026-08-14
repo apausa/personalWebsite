@@ -4,6 +4,7 @@ import { Montserrat, Newsreader } from "next/font/google";
 
 import P5Sketch from "@/components/Background";
 import { ThemeProvider } from "@/components/ui/theme-provider";
+import { METADATA } from "@/lib/constants";
 
 import "./globals.css";
 
@@ -20,10 +21,7 @@ const montserrat = Montserrat({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Pablo Apausa",
-  description: "Personal website",
-};
+export const metadata: Metadata = METADATA;
 
 export default function RootLayout({
   children,
@@ -31,14 +29,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html suppressHydrationWarning data-theme="light" lang="en">
+    <html
+      suppressHydrationWarning
+      data-theme="light"
+      lang="en"
+      className={`
+        ${newsreader.variable}
+        ${montserrat.variable}
+        font-serif
+        antialiased
+      `}
+    >
       <body
         className={`
-          ${newsreader.variable}
-          ${montserrat.variable}
-          font-serif
-          text-lg
-          antialiased
           bg-custom-foreground
           text-custom-background
           dark:bg-custom-background
