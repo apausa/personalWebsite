@@ -4,7 +4,7 @@ import { NextResponse } from "next/server";
 
 import { SPOTIFY_URL_PLAYER, SPOTIFY_URL_TOKEN } from "@/lib/constants";
 
-import type { SpotifySong, SpotifyToken } from "@/lib/types/api";
+import type { SpotifySong, SpotifyToken } from "@/lib/types";
 
 const redis = Redis.fromEnv();
 

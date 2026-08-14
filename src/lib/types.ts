@@ -92,3 +92,16 @@ export interface SpotifyToken {
   scope: string;
   refresh_token: string;
 }
+
+interface SuccessResponse {
+  link: string;
+  name: string;
+  image: string;
+  artists: string[];
+}
+
+interface ErrorResponse {
+  error: string;
+}
+
+export type Response = SuccessResponse | ErrorResponse;
