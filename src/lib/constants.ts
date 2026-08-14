@@ -1,5 +1,6 @@
 import {
   IconBrandGithubFilled,
+  IconBrandHackerrank,
   IconBrandLinkedinFilled,
 } from "@tabler/icons-react";
 
@@ -23,6 +24,11 @@ export const LINKS = [
     name: "GitHub",
     href: "https://github.com/apausa",
     icon: IconBrandGithubFilled,
+  },
+  {
+    name: "HackerRank",
+    href: "https://www.hackerrank.com/profile/apausa",
+    icon: IconBrandHackerrank,
   },
 ];
 
