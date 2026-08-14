@@ -2,13 +2,13 @@
 
 import { useEffect, useState } from "react";
 
-import Contact from "@/components/page/Contact";
-import Links from "@/components/page/Links";
-import ModeToggle from "@/components/page/ModeToggle";
-import Place from "@/components/page/Place";
-import Spotify from "@/components/page/Spotify";
-import Time from "@/components/page/Time";
-import Title from "@/components/page/Title";
+import Contact from "@/components/page/contact";
+import Links from "@/components/page/links";
+import ModeToggle from "@/components/page/mode-toggle";
+import Place from "@/components/page/place";
+import Spotify from "@/components/page/spotify";
+import Time from "@/components/page/time";
+import Title from "@/components/page/title";
 import { Separator } from "@/components/ui/separator";
 
 export default function Home() {
