@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-non-null-assertion */
 /* eslint-disable consistent-return */
 
 "use client";
@@ -19,24 +18,23 @@ export const P5Sketch = (): React.ReactElement => {
   useEffect(() => {
     if (!containerRef.current) return;
 
-    // Clean up existing instance
-    if (p5Instance.current) {
-      p5Instance.current.remove();
-      p5Instance.current = null;
-    }
+    let cancelled = false;
+    let instance: p5 | null = null;
 
     (async () => {
       const P5 = (await import("p5")).default;
-      const currentTheme = resolvedTheme;
-      p5Instance.current = new P5(
-        asciiOrb(currentTheme),
-        containerRef.current!,
-      );
+
+      if (cancelled || !containerRef.current) return;
+
+      instance = new P5(asciiOrb(resolvedTheme), containerRef.current);
+      p5Instance.current = instance;
     })();
 
     return () => {
-      p5Instance.current?.remove();
-      p5Instance.current = null;
+      cancelled = true;
+      instance?.remove();
+
+      if (p5Instance.current === instance) p5Instance.current = null;
     };
   }, [resolvedTheme]);
 
