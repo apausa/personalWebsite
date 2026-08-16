@@ -7,7 +7,7 @@ export function Mail() {
     <p className={cn("min-w-0 break-words")}>
       <IconMailFilled className="w-4 h-4 inline-block mr-2" />
       <a
-        className="hover:underline dark:text-custom-green"
+        className="hover:underline dark:text-custom-green text-custom-red"
         href="mailto:pablo@apausa.dev"
         rel="noreferrer"
         target="_blank"
