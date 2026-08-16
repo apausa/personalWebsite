@@ -44,7 +44,7 @@ export default function Home() {
         text-lg
         "
       >
-        <div className="fixed right-4 md:right-8 top-8 z-2 xs:absolute">
+        <div className="absolute right-4 md:right-8 top-8 z-2">
           <ModeToggle />
         </div>
         <div className="grid grid-cols-6 gap-4">
@@ -60,14 +60,16 @@ export default function Home() {
             <Mail />
           </div>
 
-          {/* Main */}
           <Separator className="col-span-6" />
+
+          {/* Main */}
           <div className="col-span-6 md:col-span-6">
             <Links />
           </div>
-          {/* <div className="col-span-6">
+          <div className="col-span-6">
             <About />
-          </div> */}
+          </div>
+
           <Separator className="col-span-6 invisible" />
 
           {/* Footer */}

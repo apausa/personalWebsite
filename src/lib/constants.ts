@@ -7,8 +7,12 @@ export const TITLE = "Pablo Apausa";
 
 export const PAGE_URL = "https://www.apausa.dev/";
 
+export const MAIL = "pablo@apausa.dev";
+
+export const LOCATION = "Geneva, Switzerland";
+
 export const DESCRIPTION =
-  "Software Engineer at CERN FCC Study — MS in Artificial Intelligence — Computer Graphics";
+  "Software Engineer at CERN FCC Study — Computer Graphics — MS in Artificial Intelligence";
 
 export const METADATA = {
   title: TITLE,
@@ -29,7 +33,7 @@ export const METADATA = {
 };
 
 export const ABOUT = [
-  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently with desktop publishing software like Aldus PageMaker and Microsoft Word including versions of Lorem Ipsum.",
+  "I’m a software engineer at CERN in Geneva, where I work on computer graphics for the Future Circular Collider Study. Before that, I studied Artificial Intelligence at the Technical University of Madrid. I am primarily interested in machine learning, deep learning and computer vision.",
 ];
 
 export const LINKS = [
