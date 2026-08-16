@@ -1,5 +1,6 @@
 import { IconMailFilled } from "@tabler/icons-react";
 
+import { MAIL } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
 export function Mail() {
@@ -12,7 +13,7 @@ export function Mail() {
         rel="noreferrer"
         target="_blank"
       >
-        pablo@apausa.dev
+        {MAIL}
       </a>
     </p>
   );
