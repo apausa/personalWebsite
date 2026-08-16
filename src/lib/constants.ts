@@ -1,7 +1,5 @@
 import {
-  IconBookmark,
   IconBrandGithubFilled,
-  IconBrandHackerrank,
   IconBrandLinkedinFilled,
 } from "@tabler/icons-react";
 
@@ -10,7 +8,7 @@ export const TITLE = "Pablo Apausa";
 export const PAGE_URL = "https://www.apausa.dev/";
 
 export const DESCRIPTION =
-  "Software Engineer at CERN FCC Study — MS in Artificial Intelligence";
+  "Software Engineer at CERN FCC Study — MS in Artificial Intelligence — Computer Graphics";
 
 export const METADATA = {
   title: TITLE,
@@ -44,11 +42,6 @@ export const LINKS = [
     name: "GitHub",
     href: "https://github.com/apausa",
     icon: IconBrandGithubFilled,
-  },
-  {
-    name: "HackerRank",
-    href: "https://www.hackerrank.com/profile/apausa",
-    icon: IconBrandHackerrank,
   },
 ];
 
