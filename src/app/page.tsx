@@ -74,7 +74,7 @@ export default function Home() {
           <div className="col-span-6">
             <Spotify />
           </div>
-          <div className="col-span-6 -mt-2 md:mt-0">
+          <div className="col-span-6 -mt-2">
             <Time>{time}</Time>
           </div>
         </div>
