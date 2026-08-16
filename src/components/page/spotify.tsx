@@ -22,8 +22,8 @@ export function Spotify() {
   }, []);
 
   return (
-    <p className={cn("min-w-0 break-words text-justify")}>
-      <IconBrandSpotifyFilled className="w-4 h-4 mb-1 inline-block align-text-center mr-2 text-justify" />
+    <p className={cn("min-w-0 break-words")}>
+      <IconBrandSpotifyFilled className="w-4 h-4 inline-block mr-2" />
       Last played •{" "}
       {"error" in recentlyPlayed ? (
         <span>{recentlyPlayed.error}</span>
