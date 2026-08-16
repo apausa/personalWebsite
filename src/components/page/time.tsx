@@ -24,8 +24,8 @@ export function Time({ children: time }: { children: Date | null }) {
     .join("");
 
   return (
-    <p className={cn("min-w-0 break-words text-justify")}>
-      <IconClockFilled className="w-4 h-4 mb-1 inline-block align-text-center mr-2" />
+    <p className={cn("min-w-0 break-words")}>
+      <IconClockFilled className="w-4 h-4 inline-block mr-2" />
       {month} {day}, {year} • {hours}:{minutes}:{seconds} at {timezone}
     </p>
   );
