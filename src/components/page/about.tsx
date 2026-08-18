@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 
-export default function Highlights() {
+export function About() {
   return (
     <Card className={cn("gap-2 bg-0")}>
       <CardHeader className="font-bold">
