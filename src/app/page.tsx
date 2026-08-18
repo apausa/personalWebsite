@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from "react";
 
-import About from "@/components/page/about";
+import Folder from "@/components/bits/Folder";
+import { About } from "@/components/page/about";
 import { Links } from "@/components/page/links";
 import { Mail } from "@/components/page/mail";
 import { ModeToggle } from "@/components/page/mode-toggle";
@@ -12,6 +13,11 @@ import { Spotify } from "@/components/page/spotify";
 import { Time } from "@/components/page/time";
 import { Separator } from "@/components/ui/separator";
 import { DESCRIPTION, TITLE } from "@/lib/constants";
+
+const images = [
+  "https://images.unsplash.com/photo-1480074568708-e7b720bb3f09?q=80&w=500&auto=format",
+  "https://images.unsplash.com/photo-1452626212852-811d58933cae?q=80&w=500&auto=format",
+];
 
 export default function Home() {
   const [time, setTime] = useState<Date | null>(null);
@@ -78,6 +84,15 @@ export default function Home() {
           </div>
           <div className="col-span-6 -mt-2">
             <Time>{time}</Time>
+          </div>
+
+          <div className="col-span-6 flex justify-center pt-24">
+            <Folder
+              className="custom-folder"
+              color="#ff79c6"
+              items={images}
+              size={1}
+            />
           </div>
         </div>
       </div>
