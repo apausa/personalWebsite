@@ -102,6 +102,6 @@ export default [
   // Custom rules
   ...customRules,
   {
-    ignores: ["src/components/ui/**"],
+    ignores: ["src/components/ui/**", "src/components/bits/**"],
   },
 ];
